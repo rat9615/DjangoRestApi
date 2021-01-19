@@ -60,6 +60,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'SEARCH_PARAM': 'q',
+}
+
 ROOT_URLCONF = 'DjangoRest.urls'
 
 TEMPLATES = [
